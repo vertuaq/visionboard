@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Board</title>
+    <style>
+        /* Background and general styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffffff; /* Set background to white */
+            color: #fff;
+        }
+
+        /* Main heading styling */
+        h1 {
+            font-size: 36px;
+            color: #ffffff;
+            background-color: #000000; /* Black background */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: fit-content;
+            margin: 0 auto;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Vision item container */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 30px;
+        }
+
+        /* Individual vision item styling */
+        .vision-item {
+            width: 250px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 2px solid #90ee90;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        /* Hover effect for interactivity */
+        .vision-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 25px rgba(144, 238, 144, 0.6);
+        }
+
+        .vision-item img {
+            width: 100%;
+            height: 150px;
+            border-bottom: 2px solid #90ee90;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .vision-item img:hover {
+            opacity: 0.9;
+        }
+
+        .vision-item h3 {
+            color: #90ee90;
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        /* Description styling */
+        .description {
+            display: none;
+            color: #f0f0f0;
+            padding: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Button for dropdown interactivity */
+        .btn-show {
+            background-color: transparent;
+            border: none;
+            color: #90ee90;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 5px;
+            transition: color 0.3s;
+        }
+
+        .btn-show:hover {
+            color: #98fb98; /* Slightly lighter green on hover */
+        }
+    </style>
+    <script>
+        function toggleDescription(index) {
+            const description = document.getElementById(`desc-${index}`);
+            description.style.display = description.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+
+<h1>Vuyisa Ngubane</h1>
+
+<div class="container">
+    <div class="vision-item">
+        <img src="it-professional.jpeg" alt="Professional IT Person" onclick="toggleDescription(1)">
+        <h3>Become a Professional Coder</h3>
+        <button class="btn-show" onclick="toggleDescription(1)">Why I Want This</button>
+        <div class="description" id="desc-1">
+            <p>Becoming a professional IT coder is my dream because I want to be skilled in technology and have a fulfilling, successful career.</p>
+        </div>
+    </div>
+
+    <div class="vision-item">
+        <img src="skydive.jpeg" alt="Skydiving" onclick="toggleDescription(2)">
+        <h3>Skydive</h3>
+        <button class="btn-show" onclick="toggleDescription(2)">Why I Want This</button>
+        <div class="description" id="desc-2">
+            <p>I want to experience the thrill of skydiving at least once, embracing adventure and stepping out of my comfort zone.</p>
+        </div>
+    </div>
+
+    <div class="vision-item">
+        <img src="deep-diving.jpeg" alt="Deep Diving" onclick="toggleDescription(3)">
+        <h3>Deep Diving</h3>
+        <button class="btn-show" onclick="toggleDescription(3)">Why I Want This</button>
+        <div class="description" id="desc-3">
+            <p>Exploring the underwater world and experiencing its beauty firsthand is something I’ve always wanted to do.</p>
+        </div>
+    </div>
+
+    <div class="vision-item">
+        <img src="restaurant.jpeg" alt="Dining" onclick="toggleDescription(4)">
+        <h3>Dine at South Africa's Best Restaurants</h3>
+        <button class="btn-show" onclick="toggleDescription(4)">Why I Want This</button>
+        <div class="description" id="desc-4">
+            <p>I love fine dining, and trying the best restaurants in South Africa will be an amazing culinary journey.</p>
+        </div>
+    </div>
+
+    <div class="vision-item">
+        <img src="audi-a8l.jpeg" alt="Audi A8L" onclick="toggleDescription(5)">
+        <h3>Own an Audi A8L</h3>
+        <button class="btn-show" onclick="toggleDescription(5)">Why I Want This</button>
+        <div class="description" id="desc-5">
+            <p>The Audi A8L represents luxury and style. Owning one would be a dream come true for me.</p>
+        </div>
+    </div>
+
+    <div class="vision-item">
+        <img src="marriage.jpeg" alt="Marriage" onclick="toggleDescription(6)">
+        <h3>Get Married</h3>
+        <button class="btn-show" onclick="toggleDescription(6)">Why I want this</button>
+        <div class="description" id="desc-6">
+            <p>I dream of finding my life partner and building a family together, creating a beautiful life with someone special.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
